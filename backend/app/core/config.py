@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     DOCS_FOLDER: str = "data/documents"
 
     # Embedding
-    EMBEDDING_MODEL: str = "intfloat/multilingual-e5-large"
+    EMBEDDING_MODEL: str
 
     # Chunking
     CHUNK_SIZE: int = 900
@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     SIMILARITY_THRESHOLD: float = 0.8
 
     # Gemini
-    GEMINI_MODEL: str = "gemini-1.5-flash"
+    GEMINI_MODEL: str
 
     class Config:
         env_file = ".env"

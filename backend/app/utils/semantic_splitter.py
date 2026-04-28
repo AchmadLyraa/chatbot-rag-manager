@@ -1,3 +1,4 @@
+# hanya untuk data.txt
 import re
 from dataclasses import dataclass
 from typing import Literal
