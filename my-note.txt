@@ -1,0 +1,3 @@
+psql -U postgres -W -h localhost -d chat_rag_pln -c "SELECT COUNT(*) FROM rag_chunks;"
+
+psql -U postgres -W -h localhost -d chat_rag_pln -c "SELECT content, metadata, embedding <=> embedding AS score FROM rag_chunks LIMIT 5;"

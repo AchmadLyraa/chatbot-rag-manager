@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS rag_chunks;
+
+CREATE TABLE rag_chunks (
+  id SERIAL PRIMARY KEY,
+  content TEXT,
+  metadata JSONB,
+  embedding VECTOR(1024)
+);

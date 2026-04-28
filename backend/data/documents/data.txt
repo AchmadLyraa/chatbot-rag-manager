@@ -1,0 +1,119 @@
+STRUKTUR ORGANISASI PLN Nusantara Power Unit Pembangkitan Kaltim Teluk Kariangau KM. 13
+
+Pimpinan Unit
+→ Manager Unit (Ketua)
+
+Di bawah Manager Unit terdapat beberapa bidang utama:
+Bidang Operasi
+Dipimpin oleh Asman Operasi
+├─ Sub Bidang Operasi Produksi
+│ ├─ TL Produksi A
+│ ├─ TL Produksi B
+│ └─ TL Produksi C
+├─ Sub Bidang Kendali Operasi
+├─ Sub Bidang K3 & Keamanan
+└─ Sub Bidang Lingkungan
+
+Bidang Pemeliharaan
+Dipimpin oleh Asman Pemeliharaan
+├─ Sub Bidang Pemeliharaan Mesin
+│ ├─ TL Mesin 1
+│ └─ TL Mesin 2
+├─ Sub Bidang Pemeliharaan Listrik
+├─ Sub Bidang Kontrol & Instrumen
+└─ Sub Bidang Outage Management
+
+Bidang Engineering & QA
+Dipimpin oleh Asman Engineering & QA
+└─ Sub Bidang System Owner (IT)
+├─ TL System Owner
+├─ TL Manajemen Mutu
+└─ TL Risiko & Kepatuhan
+
+Bidang Business Support
+Dipimpin oleh Asman Business Support
+├─ Sub Bidang Keuangan
+├─ Sub Bidang SDM, Umum & CSR
+│ ├─ TL SDM
+│ ├─ TL Umum
+│ └─ TL CSR
+└─ Sub Bidang Pengadaan
+
+CSR berada di bawah Business Support → SDM, Umum & CSR
+IT berada di bawah Engineering & QA → System Owner
+
+Berita:
+Kunjungi PLN Nusantara Power Unit Pembangkitan Kaltim Teluk, Dirjen Gatrik Apresiasi Kesiapsiagaan Pasokan Listrik Jelang Nataru 2025
+
+Jakarta, Senin 16 Desember – PLN Nusantara Power (PLN NP) mendapatkan apresiasi dalam kesiapsiagaan pasokan listrik andal menjelang Natal 2024 dan Tahun Baru 2025 (Nataru 2024-2025). Hal tersebut diungkapkan oleh Direktur Jenderal Ketenagalistrikan Kementerian Energi dan Sumber Daya Mineral (ESDM), Jisman P. Hutajulu yang melakukan kunjungan kerja ke PLN NP Unit Pembangkitan (UP) Kaltim Teluk guna memastikan kesiapan pasokan listrik menjelang Nataru 2024-2025 di Kalimantan pada hari Sabtu (14/12).
+
+Kunjungan tersebut didampingi langsung oleh Direktur Transmisi dan Perencanaan Sistem PT PLN (Persero), Evy Haryadi dan Direktur Utama PLN NP, Ruly Firmansyah. Dalam kunjungan tersebut Jisman menyatakan persiapan dan kesiapan PLN NP dalam memproduksi dan mempertahankan pasokan listrik untuk Kalimantan patut mendapatkan apresiasi. Pasalnya, PLN NP telah mempersiapkan agenda ini menjadi agenda tahunan dan dipahami oleh karyawan unit setempat yang bertugas.
+
+"Saya rasa PLN NP telah terbiasa dengan agenda ini sehingga seluruh karyawan yang bertugas telah mempersiapkan agenda penting ini dengan teliti. Setelah melihat persiapan yang cukup matang PLN NP siap untuk menyambut Nataru 2025 , ", terang Jisman.
+
+Senada dengan Jisman, Direktur Transmisi dan Perencanaan Sistem PT  PLN (Persero), Evy Haryadi mengatakan, PLN sendiri telah menetapkan Masa Siaga Nataru 2024-2025 mulai 18 Desember 2024 hingga 8 Januari 2025 dengan melibatkan lebih dari 81 ribu personel yang siap siaga di seluruh Indonesia.
+
+“Kami memastikan lokasi-lokasi penting seperti gereja, tempat ibadah, dan pusat keramaian telah mendapatkan perhatian khusus untuk mendukung kelancaran perayaan Nataru. Sekaligus kesiapan menyeluruh dari hulu hingga ke hilir, kami optimis bahwa pasokan listrik selama periode Natal dan Tahun Baru aman, andal, dan terkendali, sehingga dapat mendukung kenyamanan masyarakat dalam merayakan hari besar ini ,” ungkap Haryadi.
+
+Sedangkan untuk di sistem Kelistrikan Kalimantan, kebutuhan listrik mencapai 2.359 MW dengan pasokan listrik tersedia sebesar 2.960 MW. Dengan demikian, pasokan listrik di Kalimantan juga berada dalam kondisi aman. PLN NP menyumbangkan 673,75 MW dari total ketersediaan listrik di Kalimantan.
+
+Dalam menunjang sistem Kelistrikan Kalimantan sendiri PLN NP memiliki unit pembangkit yang tersebar luas. Diantaranya adalah UP Kaltim Teluk yang memiliki kapasitas terpasang 2 x 110 MW, dengan total daya maksimal 220 MW dengan produksi energi listrik PLTU rata-rata sebesar 1,15 juta MWh/tahun.
+
+Direktur Utama PLN NP, Ruly Firmansyah juga tak lupa untuk menyebut langkah dan persiapan PLN NP menyambut hari besar umat Kristen dan Katolik tersebut.
+
+"Pada gelaran menjelang Nataru 2024-2025, kami telah memantau dan melakukan persiapan jauh hari sebelumnya. Melalui pendirian posko siaga serta monitoring dari karyawan 24 jam nonstop setiap harinya, PLN NP telah memerinci langkah preventif dan korektif untuk memastikan keandalan pasokan listrik", terang Ruly.
+
+PLN NP UP Kaltim Teluk dilengkapi dengan teknologi pendukung modern untuk memastikan operasional yang ramah lingkungan dan efisien. Teknologi  Electrostatic Precipitator (ESP) berfungsi menangkap partikel abu sisa pembakaran, sehingga emisi yang dihasilkan memenuhi ambang batas yang ditetapkan pemerintah. Selain itu, pembangkit ini dilengkapi dengan Distributed Control System (DCS), sebuah sistem kontrol otomatis yang dirancang untuk mengelola operasional secara efisien dan memastikan keandalan pembangkit.
+
+PLN NP UP Kaltim Teluk dirancang dengan efisiensi termal sekitar 38%, memastikan konsumsi batu bara yang optimal untuk menghasilkan listrik. Pembangkit ini memiliki fleksibilitas operasional yang memungkinkan penyesuaian output daya sesuai kebutuhan, baik untuk beban dasar maupun beban puncak. Selain itu, UP Kaltim Teluk terhubung ke jaringan transmisi 150 kV yang mendistribusikan listrik secara andal ke wilayah Kalimantan Timur, mendukung kebutuhan energi masyarakat dan industri setempat.
+
+Narahubung :
+Harry Purnomo
+Vice President Corporate Communication and CSR PLN NP
+Tlp. 031 8283180
+Fax. 031 8283183
+
+Sekilas Tentang PT PLN Nusantara Power
+PT PLN Nusantara Power adalah Subholding dari PT PLN (Persero) yang senantiasa mengabdikan diri untuk bangsa dan negara Indonesia, serta mendorong perkembangan perekonomian nasional dengan menyediakan energi listrik yang bermutu tinggi, andal dan ramah lingkungan. Dengan visi menjadi Perusahaan pembangkitan yang terdepan dan terpercaya untuk energi berkelanjutan di Indonesia dan luar negeri, PT PLN NP tiada henti berbenah dan melakukan inovasi dengan tetap berpegang pada kaidah tata pengelolaan perusahaan yang baik (Good Corporate Governance/GCG)
+
+
+PLN Nusantara Power Unit Pembangkitan Kaltim Teluk kembali menunjukkan komitmennya dalam mendorong ekonomi berkelanjutan dan pemberdayaan masyarakat melalui kegiatan Digitalisasi UMKM: Pelatihan dan Pengelolaan Aplikasi Bank Sampah, yang dilaksanakan pada tanggal 11–12 November 2025.
+
+Kegiatan ini diikuti oleh dua kelompok mitra binaan, yaitu Bank Sampah Bersinar dan Bank Sampah Maju Sejahtera, dengan menghadirkan pemateri dari Institut Teknologi Kalimantan (ITK) dan Bank Sampah Kota Hijau.
+
+Acara dibuka secara resmi oleh Bapak Ady Sumardi, perwakilan Dinas Koperasi, UMKM, dan Perindustrian Kota Balikpapan, yang dalam sambutannya menyampaikan,
+
+“Kami berharap kolaborasi antara pemerintah, akademisi, dan perusahaan seperti PLN Nusantara Power dapat terus berlanjut untuk memperkuat UMKM lokal dan mewujudkan Balikpapan sebagai kota modern yang berbasis ekonomi kreatif dan ramah lingkungan.” ujar Ady Sumardi
+
+Turut hadir dalam kegiatan ini perwakilan Kelurahan Kariangau, Bapak Muhammad Ridwan, serta perwakilan PLN Nusantara Power UP Kaltim Teluk, Bapak Bambang Bagja selaku Team Leader SDM, Umum & CSR.
+
+Pada hari kedua, peserta mendapat tambahan wawasan dari Bank Sampah Kota Hijau yang memaparkan materi tentang cara memilah sampah bernilai ekonomis dan non-ekonomis, sebagai upaya peningkatan nilai tambah dari aktivitas pengelolaan sampah di masyarakat.
+
+Manager PLN Nusantara Power UP Kaltim Teluk, Bapak Habib Muhajir, menyampaikan harapannya agar kegiatan ini dapat menjadi langkah nyata dalam menciptakan masyarakat yang mandiri dan berdaya melalui inovasi sosial dan digitalisasi.
+
+“Digitalisasi bukan sekadar tren, tetapi kebutuhan untuk memperkuat keberlanjutan dan transparansi pengelolaan lingkungan. Melalui pelatihan ini, kami berharap Bank Sampah dapat menjadi pionir perubahan menuju ekonomi sirkular di Balikpapan,” ujar Habib Muhajir.
+
+Melalui kegiatan ini, PLN Nusantara Power berkomitmen mendukung program pemerintah daerah dalam menciptakan ekosistem UMKM yang modern, kreatif, dan ramah lingkungan, sejalan dengan semangat Green Energy dan Sustainable Development Goals (SDGs).
+
+
+Balikpapan (10/10) — Sebagai bentuk kepedulian terhadap masyarakat sekitar, PT PLN Nusantara Power Unit Pembangkitan (UP) Kaltim Teluk bersama LAZNAS Inisiatif Zakat Indonesia (IZI) Perwakilan Kaltim kembali menebar kebahagiaan bagi para lanjut usia (lansia) di Kelurahan Kariangau, Balikpapan Barat. Kegiatan ini menjadi wujud nyata sinergi antara korporasi dan lembaga zakat dalam menghadirkan manfaat bagi warga yang membutuhkan.
+
+Melalui program bantuan paket sembako, sebanyak 30 lansia menerima manfaat langsung dari kegiatan sosial tersebut. Para penerima bantuan sebagian besar merupakan warga dengan kondisi ekonomi terbatas, tidak lagi bekerja, dan beberapa di antaranya tengah menghadapi penurunan kesehatan. Kehadiran bantuan ini diharapkan mampu menjadi penyemangat bagi para lansia untuk tetap bertahan dan berdaya di masa tua.
+
+Rasa syukur juga datang dari para penerima manfaat. Salah satunya, Nenek Hasna, yang tidak dapat menyembunyikan kebahagiaannya usai menerima bantuan. “Terima kasih nak, sudah beri nenek sembako. Senang sekali rasanya, kebetulan beras di rumah sudah hampir habis. Semoga PLN dan semua karyawannya selalu sehat, rezekinya lancar, dan perusahaannya semakin maju,” tutur Nenek Hasna haru.
+
+Melalui kegiatan ini, PLN Nusantara Power UP Kaltim Teluk bersama IZI Kaltim terus menegaskan komitmennya dalam menghadirkan kebermanfaatan bagi masyarakat sekitar. Sinergi ini menjadi bukti bahwa cahaya kebaikan tidak hanya berasal dari listrik yang menerangi rumah, tetapi juga dari kepedulian yang menerangi hati—menyentuh kehidupan mereka yang membutuhkan.
+
+PLTU Teluk Balikpapan Rancang CSR Pesisir Berkelanjutan
+PT PLTU Teluk Balikpapan (PLN Nusantara Power) tengah merancang program Tanggung Jawab Sosial dan Lingkungan (CSR) yang bertujuan memberdayakan masyarakat sekaligus melestarikan lingkungan hidup di wilayah Teluk Balikpapan, Kelurahan Kariangau, Kecamatan Balikpapan Barat.
+
+Senin (28/4/2025), tim gabungan yang dipimpin oleh Heri Saputro, Koordinator TPI Klandasan dan Kampung Baru dari DKP3 Kota Balikpapan, melaksanakan survei ekosistem lamun (seagrass) di perairan Teluk Balikpapan. Survei ini dilakukan untuk memperoleh gambaran akurat mengenai kondisi lingkungan serta potensi sumber daya alam yang bisa dikembangkan dalam program CSR mendatang.
+
+Heri Seputro mengatakan, hasil survei menunjukkan bahwa potensi ekologis yang sangat penting dan banyak keanekaragaman hayati yang luar biasa di kawasan ini, termasuk keberadaan Penyu Hijau (Chelonia mydas) dan Bangau Tong-tong (Leptoptilos javanicus) yang merupakan spesies langka dan dilindungi.
+
+Menurutnya, hal ini akan memperkuat urgensi pelestarian ekosistem di sekitar Teluk Balikpapan, sekaligus menjadi landasan agar program CSR yang disusun tidak hanya berfokus pada pemberdayaan ekonomi masyarakat, tetapi juga pada perlindungan lingkungan dan spesies endemik.
+
+Turut terlibat dalam kegiatan survei ini perwakilan dari PT PLTU Teluk Balikpapan, Yuda Wardana; dua anggota Binmas Air Ditpolairud Polda Kaltim, Bripka Taufik dan Bripka Purwanto; serta Edi, relawan Garuda dari PT PLTU Teluk Balikpapan.
+
+
+Harapannya, inisiatif ini dapat menjadi contoh kolaborasi multipihak yang harmonis antara dunia industri, pemerintah, dan masyarakat dalam menciptakan pembangunan yang berkelanjutan di kawasan pesisir.
