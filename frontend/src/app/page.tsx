@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 interface Message {
   id: string;
@@ -76,17 +77,23 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col w-full max-w-2xl py-24 mx-auto">
+      <Link
+        href="/file-manager"
+        className="fixed top-4 right-4 px-4 py-2 bg-black text-white rounded"
+      >
+        File Manager RAG
+      </Link>
       <div className="flex flex-col gap-4 mb-24">
         {messages.map((m) => (
           <div
             key={m.id}
             className={`p-3 rounded-lg whitespace-pre-wrap ${
               m.role === "user"
-                ? "bg-blue-100 dark:bg-blue-900 self-end max-w-lg"
-                : "bg-zinc-100 dark:bg-zinc-800 self-start max-w-lg"
+                ? "bg-blue-100 text-black self-end max-w-lg"
+                : "bg-zinc-100 text-black self-start max-w-lg"
             }`}
           >
-            <span className="text-xs font-bold block mb-1 opacity-60">
+            <span className="text-xs font-bold block mb-1 opacity-60 text-gray-700">
               {m.role === "user" ? "Kamu" : "AI"}
             </span>
             {m.content || (loading && m.role === "assistant" ? "..." : "")}
@@ -100,7 +107,7 @@ export default function Chat() {
         className="fixed bottom-0 w-full max-w-2xl mb-8 flex gap-2"
       >
         <input
-          className="flex-1 p-3 border border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900 rounded-lg shadow-xl"
+          className="flex-1 p-3 border border-zinc-300 bg-white text-black rounded-lg shadow-xl"
           value={input}
           placeholder="Tanya sesuatu..."
           onChange={(e) => setInput(e.target.value)}

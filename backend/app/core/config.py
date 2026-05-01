@@ -15,9 +15,13 @@ class Settings(BaseSettings):
     # App
     FRONTEND_URL: str = "http://localhost:3000"
     DOCS_FOLDER: str = "data/documents"
+    API_BASE_URL: str = "http://localhost:8000"
+
+    # Storage
+    STORAGE_BASE_PATH: str = "./public/files"
 
     # Embedding
-    EMBEDDING_MODEL: str
+    EMBEDDING_MODEL: str = "intfloat/multilingual-e5-large"
 
     # Chunking
     CHUNK_SIZE: int = 900
@@ -29,6 +33,10 @@ class Settings(BaseSettings):
 
     # Gemini
     GEMINI_MODEL: str
+
+    @property
+    def database_url(self) -> str:
+        return f"postgresql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
 
     class Config:
         env_file = ".env"

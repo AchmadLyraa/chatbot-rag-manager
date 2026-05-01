@@ -1,9 +1,21 @@
-import psycopg2
-from psycopg2.extras import RealDictCursor
-from psycopg2 import pool
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, Session
+import psycopg2.pool
 from app.core.config import settings
 
-connection_pool = psycopg2.pool.ThreadedConnectionPool(
+# SQLAlchemy — untuk ORM (file manager)
+engine = create_engine(settings.database_url, echo=False)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+def get_db() -> Session:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+# psycopg2 pool — untuk raw query pgvector (RAG)
+pg_pool = psycopg2.pool.ThreadedConnectionPool(
     minconn=1,
     maxconn=10,
     host=settings.DB_HOST,
@@ -14,7 +26,7 @@ connection_pool = psycopg2.pool.ThreadedConnectionPool(
 )
 
 def get_connection():
-    return connection_pool.getconn()
+    return pg_pool.getconn()
 
 def release_connection(conn):
-    connection_pool.putconn(conn)
+    pg_pool.putconn(conn)
