@@ -157,3 +157,16 @@ export async function deleteFile(id: string) {
     return { success: false, error: "Failed to delete file" };
   }
 }
+
+export async function indexFile(id: string) {
+  try {
+    const response = await api.post(`/files/${id}/index`);
+    return { success: true, data: response.data };
+  } catch (error: any) {
+    console.error("[v0] Error indexing file:", error.response?.data);
+    return {
+      success: false,
+      error: error.response?.data?.detail || "Failed to index file",
+    };
+  }
+}

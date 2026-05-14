@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from app.models.file import File
 from app.core.config import settings
 from typing import List, Optional
+from app.models.chunk import Chunk
 import os
 import uuid
 from pathlib import Path
@@ -57,19 +58,27 @@ class FileService:
             raise ValueError("File ID is required")
 
         file = db.query(File).filter(File.id == file_id).first()
+
         if not file:
             return False
 
         try:
             file_path = os.path.join(settings.STORAGE_BASE_PATH, file.filename)
+
             if os.path.exists(file_path):
                 os.remove(file_path)
-        except Exception as e:
-            print(f"Warning: Could not delete physical file: {e}")
 
-        db.delete(file)
-        db.commit()
-        return True
+            db.query(Chunk).filter(Chunk.file_id == file_id).delete()
+
+            db.delete(file)
+            db.commit()
+
+            return True
+
+        except Exception as e:
+            db.rollback()
+            print("DELETE ERROR:", e)
+            raise
 
     @staticmethod
     def save_file_content(original_filename: str, content: bytes) -> tuple[str, str]:
@@ -79,8 +88,15 @@ class FileService:
         os.makedirs(settings.STORAGE_BASE_PATH, exist_ok=True)
 
         trimmed_filename = original_filename.strip()
-        file_ext = Path(trimmed_filename).suffix
+
+        file_ext = Path(trimmed_filename).suffix.lower()
+
+        # fallback kalau file tanpa ekstensi
+        if not file_ext:
+            file_ext = ""
+
         uuid_filename = f"{uuid.uuid4()}{file_ext}"
+
         file_path = os.path.join(settings.STORAGE_BASE_PATH, uuid_filename)
 
         with open(file_path, "wb") as f:

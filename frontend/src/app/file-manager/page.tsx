@@ -20,6 +20,7 @@ export default function FileManagerPage() {
     deleteFolder,
     deleteFile,
     navigateToFolder,
+    indexFile,
   } = useFileManager();
 
   return (
@@ -74,7 +75,11 @@ export default function FileManagerPage() {
             {/* Files */}
             <div className="lg:col-span-2">
               <h2 className="text-lg font-semibold mb-3">Files</h2>
-              <FileList files={files} onDelete={deleteFile} />
+              <FileList
+                files={files}
+                onDelete={deleteFile}
+                onIndex={indexFile}
+              />
             </div>
           </div>
         )}

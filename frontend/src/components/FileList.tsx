@@ -16,10 +16,12 @@ import { formatFileSize, formatDate } from "@/lib/utils";
 interface FileListProps {
   files: FileType[];
   onDelete: (id: string) => void;
+  onIndex: (id: string) => Promise<void>;
 }
 
-export function FileList({ files, onDelete }: FileListProps) {
+export function FileList({ files, onDelete, onIndex }: FileListProps) {
   const [previewFile, setPreviewFile] = useState<FileType | null>(null);
+  const [indexingId, setIndexingId] = useState<string | null>(null);
 
   const getFileIcon = (filename: string, mimeType: string | null) => {
     const ext = filename.split(".").pop()?.toLowerCase() || "";
@@ -80,6 +82,7 @@ export function FileList({ files, onDelete }: FileListProps) {
               </th>
             </tr>
           </thead>
+
           <tbody>
             {files.map((file) => (
               <tr
@@ -92,14 +95,23 @@ export function FileList({ files, onDelete }: FileListProps) {
                     <span className="text-gray-900 font-medium">
                       {file.originalFilename}
                     </span>
+
+                    {file.indexed && (
+                      <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                        Indexed
+                      </span>
+                    )}
                   </div>
                 </td>
+
                 <td className="p-3 text-gray-600">
                   {file.size ? formatFileSize(file.size) : "-"}
                 </td>
+
                 <td className="p-3 text-gray-600">
                   {formatDate(new Date(file.createdAt))}
                 </td>
+
                 <td className="p-3">
                   <div className="flex items-center justify-center gap-2">
                     {canPreview(file.mimeType) && (
@@ -111,6 +123,29 @@ export function FileList({ files, onDelete }: FileListProps) {
                         <Eye className="w-4 h-4" />
                       </button>
                     )}
+
+                    {!file.indexed && (
+                      <button
+                        disabled={indexingId === file.id}
+                        onClick={async () => {
+                          try {
+                            setIndexingId(file.id);
+                            await onIndex(file.id);
+                          } finally {
+                            setIndexingId(null);
+                          }
+                        }}
+                        className={`px-2 py-1 rounded text-xs font-medium transition ${
+                          indexingId === file.id
+                            ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                            : "bg-green-100 text-green-700 hover:bg-green-200"
+                        }`}
+                        title="Index"
+                      >
+                        {indexingId === file.id ? "Indexing..." : "Index"}
+                      </button>
+                    )}
+
                     <button
                       onClick={() => onDelete(file.id)}
                       className="p-1 text-red-500 hover:bg-red-50 rounded transition"
@@ -129,48 +164,55 @@ export function FileList({ files, onDelete }: FileListProps) {
       {/* Preview Modal */}
       {previewFile && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
           onClick={() => setPreviewFile(null)}
         >
           <div
-            className="bg-white rounded-lg p-6 max-w-2xl max-h-96 overflow-auto shadow-lg"
+            className="bg-white rounded-xl w-[95vw] h-[95vh] flex flex-col overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold">
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b">
+              <h3 className="font-semibold truncate">
                 {previewFile.originalFilename}
               </h3>
+
               <button
                 onClick={() => setPreviewFile(null)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-2xl text-gray-500 hover:text-black"
               >
                 ×
               </button>
             </div>
 
-            {/* Image Preview */}
-            {previewFile.mimeType?.startsWith("image/") && (
-              <img
-                src={previewFile.storagePath}
-                alt={previewFile.originalFilename}
-                className="w-full h-auto rounded"
-              />
-            )}
+            {/* Body */}
+            <div className="flex-1 overflow-hidden">
+              {/* IMAGE */}
+              {previewFile.mimeType?.startsWith("image/") && (
+                <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                  <img
+                    src={previewFile.storagePath}
+                    alt={previewFile.originalFilename}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              )}
 
-            {/* PDF Preview */}
-            {previewFile.mimeType === "application/pdf" && (
-              <iframe
-                src={previewFile.storagePath}
-                className="w-full h-96 rounded"
-              />
-            )}
+              {/* PDF */}
+              {previewFile.mimeType === "application/pdf" && (
+                <iframe
+                  src={previewFile.storagePath}
+                  className="w-full h-full"
+                />
+              )}
 
-            {/* Text File Preview */}
-            {previewFile.mimeType?.startsWith("text/") && (
-              <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre-wrap break-words">
-                Loading text content...
-              </div>
-            )}
+              {/* TEXT */}
+              {previewFile.mimeType?.startsWith("text/") && (
+                <div className="w-full h-full overflow-auto p-4 font-mono text-sm">
+                  Loading text content...
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

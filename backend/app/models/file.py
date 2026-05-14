@@ -19,5 +19,11 @@ class File(Base):
 
     folder = relationship("Folder", back_populates="files")
 
+    chunks = relationship(
+        "Chunk",
+        back_populates="file",
+        cascade="all, delete-orphan"
+    )
+
     createdAt = Column(DateTime, default=datetime.utcnow)
     updatedAt = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

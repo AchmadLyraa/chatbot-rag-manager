@@ -14,7 +14,7 @@ def retrieve_relevant_docs(query: str) -> list[dict]:
     try:
         with conn.cursor() as cur:
             cur.execute("""
-                SELECT content, metadata, embedding <=> %s::vector AS score
+                SELECT file_id, content, meta_data, embedding <=> %s::vector AS score
                 FROM rag_chunks
                 ORDER BY score ASC
                 LIMIT %s
@@ -23,11 +23,12 @@ def retrieve_relevant_docs(query: str) -> list[dict]:
             results = cur.fetchall()
 
         relevant = []
-        for content, metadata, score in results:
+        for file_id, content, meta_data, score in results:
             if score <= settings.SIMILARITY_THRESHOLD:
                 doc = {
+                    "file_id": file_id,
                     "content": content,
-                    "metadata": metadata if isinstance(metadata, dict) else json.loads(metadata),
+                    "meta_data": meta_data if isinstance(meta_data, dict) else json.loads(meta_data),
                     "score": round(score, 3)
                 }
                 relevant.append(doc)
@@ -42,7 +43,7 @@ def format_docs_as_context(docs: list[dict]) -> str:
 
     parts = []
     for i, doc in enumerate(docs):
-        meta = doc["metadata"]
+        meta = doc["meta_data"]
         meta_info = " | ".join(filter(None, [
             f"Tipe: {meta.get('type', 'unknown')}",
             f"Source: {meta.get('source', 'unknown')}",

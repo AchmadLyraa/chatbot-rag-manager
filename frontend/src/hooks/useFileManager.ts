@@ -9,6 +9,7 @@ import {
   uploadFile as apiUploadFile,
   deleteFolder as apiDeleteFolder,
   deleteFile as apiDeleteFile,
+  indexFile as apiIndexFile,
   Folder,
   File,
 } from "@/lib/api-client";
@@ -125,6 +126,20 @@ export function useFileManager() {
     setLoading(false);
   }, []);
 
+  const indexFile = useCallback(async (fileId: string) => {
+    const result = await apiIndexFile(fileId);
+
+    if (result.success) {
+      setFiles((prev) =>
+        prev.map((f) => (f.id === fileId ? { ...f, indexed: true } : f)),
+      );
+      return true;
+    } else {
+      setError(result.error || "Failed to index file");
+      return false;
+    }
+  }, []);
+
   // Navigate to folder
   const navigateToFolder = useCallback(
     async (folderId: string | null) => {
@@ -184,5 +199,6 @@ export function useFileManager() {
     deleteFolder,
     deleteFile,
     navigateToFolder,
+    indexFile,
   };
 }
